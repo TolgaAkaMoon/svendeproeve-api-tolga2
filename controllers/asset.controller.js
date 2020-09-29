@@ -5,7 +5,7 @@ async function createSingleAsset(req, res, next) {
   try {
     let file = saveFile(req.files.file);
     let asset = await Asset.create({
-      url: "https://svendeproeveapi.herokuapp.com/file-bucket/" + file,
+      url: "https://svende-api-tolga-fixed.herokuapp.com/file-bucket/" + file,
     });
     res.json(asset);
   } catch (error) {
